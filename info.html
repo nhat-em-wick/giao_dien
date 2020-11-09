@@ -1,0 +1,35 @@
+
+  
+    <div class="account-page">
+        <div class="container">
+            <div class="form-container">
+                <h3>Thông tin cá nhân</h3>
+                <form action="/my/edit/<%= user._id %>" id="changeInfo">
+                      <input type="email" disabled value="<%= user.email %> ">
+                      <input type="text" id="name" name="name" value="<%= user.name %> ">
+                      <input type="password" id="password" placeholder="Mật khẩu" name="password">
+                      <input type="password" id="conf_password" placeholder="Nhập lại mật khẩu" name="conf_password">
+                      <button type="submit" id="btn-changeInfo" class="btn-1">Thay đổi thông tin</button>
+                      <a href="/logout">Đăng xuất</a>
+                  </form>
+            </div>
+        </div>
+    </div>
+     <script>
+        const password = document.querySelector('#password')
+        const btnChange = document.querySelector('#btn-changeInfo')
+        try{
+            btnChange.disabled = true;
+        password.addEventListener('keyup', ()=>{
+              if(password.value.length>0){
+                  btnChange.disabled = false;
+              }else{
+                btnChange.disabled = true;
+              }
+          })
+        }catch{
+
+        }
+     </script>
+
+   

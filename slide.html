@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        .new-box{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background-color: gray;
+            overflow: hidden;
+        }
+        .new-box:hover .new-link{
+            bottom: 0;
+        }
+        .new-link{
+            position: absolute;
+            bottom: -100%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(229,89,71,.2);
+            transition: .3s;
+        }
+        .button{
+            background: rgb(184, 61, 13);
+            padding: 10px 5px;
+        }
+    </style>
+   <div class="new-box">
+       <img src="/images/9781441106896.jpg">
+       <div class="new-link">
+           <a href="" class="button">VIEW PRODUCT</a>
+       </div>
+   </div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>

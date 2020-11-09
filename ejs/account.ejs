@@ -1,0 +1,37 @@
+
+  
+    <div class="account-page">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-btn">
+                    <span onclick=login()>Đăng nhập</span>
+                    <span onclick=register()>Tạo tài khoản</span>
+                    <hr id="indicator">
+                </div><br>
+                
+                <form action="/login" id="login" method="POST">
+                  <% if(messages.error){ %> 
+                  <small><%= messages.error %></small>
+                  <% } %> 
+                    <input type="email" placeholder="Email" name="email" value="<%= messages.email %>">
+                    <input type="password" placeholder="Mật khẩu" name="password">
+                    <button type="submit" class="btn-1">Đăng nhập</button>
+                    <a href="/forgotpassword">Quên mật khẩu</a>
+                </form>
+                <form action="/register" id="register" method="POST">
+                  <% if(messages.error){ %> 
+                    <small><%= messages.error %> </small>
+                    <% } %>
+                    <input type="text" placeholder="Tên" name="name" value="<%= messages.name %>">
+                    <input type="email" placeholder="Email" name="email" value="<%= messages.email %>">
+                    <input type="password" placeholder="Mật khẩu" name="password" value="<%= messages.password %>">
+                    <input type="password" placeholder="Nhập lại mật khẩu" name="conf_password" value="<%= messages.conf_password %>">
+                    <button type="submit" class="btn-1">Đăng kí</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+     
+
+    
